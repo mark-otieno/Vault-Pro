@@ -49,7 +49,9 @@ const CountrySelector = ({ handleSelectionNext, is_from_external, mismatch_statu
         handleSelectionNext?.();
     };
 
-    const failed_message: React.ReactNode = mismatch_status ? IDV_ERROR_STATUS[mismatch_status]?.message ?? null : null;
+    const failed_message: React.ReactNode = mismatch_status
+        ? (IDV_ERROR_STATUS[mismatch_status]?.message ?? null)
+        : null;
 
     return (
         <Formik initialValues={initial_form_values} validate={validateFields} onSubmit={submitHandler}>

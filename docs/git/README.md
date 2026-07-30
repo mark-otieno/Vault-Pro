@@ -26,11 +26,11 @@ We agreed to have this convention for branch naming in the entire frontend repos
 
 `{OWNER_NAME}/{TASK_ID}/{BRANCH_TITLE}`
 
--   `OWNER_NAME`: is the developer name that working on it
+- `OWNER_NAME`: is the developer name that working on it
 
--   `TASK_ID`: would refer to id of the task in the task manager app which is currently Redmine.
+- `TASK_ID`: would refer to id of the task in the task manager app which is currently Redmine.
 
--   `BRANCH_TITLE`: branch name that would be a feature, bugfix or hotfix
+- `BRANCH_TITLE`: branch name that would be a feature, bugfix or hotfix
 
 Example:
 
@@ -56,15 +56,15 @@ Each commit message will consists of **type** and **subject**:
 
 Must be one of the following:
 
--   **build**: Changes that affect the build system or external dependencies (example scopes: gatsby config, gatsby browser, gatsby node, or gatsby ssr)
--   **chores**: Add or Changes on packages or external dependencies
--   **ci**: Changes to our CI configuration files and scripts (example scopes: Docker, nginx conf)
--   **docs**: Documentation only changes
--   **feat**: A new feature
--   **fix**: A bug fix
--   **perf**: A code change that improves performance
--   **refactor**: A code change that neither fixes a bug nor adds a feature
--   **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
--   **text**: Adding text or updating text only
--   **empty**: Rare cases for re-deploying when deployment server is down
--   **revert**: A commit reverts a previous commit
+- **build**: Changes that affect the build system or external dependencies (example scopes: gatsby config, gatsby browser, gatsby node, or gatsby ssr)
+- **chores**: Add or Changes on packages or external dependencies
+- **ci**: Changes to our CI configuration files and scripts (example scopes: Docker, nginx conf)
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **text**: Adding text or updating text only
+- **empty**: Rare cases for re-deploying when deployment server is down
+- **revert**: A commit reverts a previous commit

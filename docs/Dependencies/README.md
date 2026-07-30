@@ -2,8 +2,8 @@
 
 **In this document**
 
--   [Working with a scope package](#working-with-a-scoped-package)
--   [Working with root](#working-with-root)
+- [Working with a scope package](#working-with-a-scoped-package)
+- [Working with root](#working-with-root)
 
 ## Working with a Scoped package
 

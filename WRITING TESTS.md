@@ -4,15 +4,15 @@ This document is intended to be a guideline for writing and running tests on _De
 
 It will cover:
 
--   Brief explanation on the test framework used in the project.(**Jest**)
+- Brief explanation on the test framework used in the project.(**Jest**)
 
--   `react-testing-library` configuration.
+- `react-testing-library` configuration.
 
--   Examples
+- Examples
 
     ## Test Framework
 
-    ​ We are using [Jest](https://jestjs.io/)  as test runner and [React Testing library](https://testing-library.com/docs/react-testing-library/intro/) as our main test component to have the ultimate needed utilities.
+    ​ We are using [Jest](https://jestjs.io/) as test runner and [React Testing library](https://testing-library.com/docs/react-testing-library/intro/) as our main test component to have the ultimate needed utilities.
 
     ### Jest
 
@@ -34,20 +34,20 @@ It will cover:
 
     ​
 
-    -   `jest.config.js`
+    - `jest.config.js`
 
         General configuration of the jest which will use to run the tests from root directory of _Deriv app_
 
-        -   `collectCoverage`: This flag makes jest to collect coverage report.
-        -   `collectCoverageFrom`: To indicate which files the coverage report should collect from. Generally we exclude all of `node_modules` directories.
-        -   `collectCoverageFrom`: The type of needed coverage report.
-        -   `clearMocks`: configuration option to clear mocks automatically before each test.
-        -   `projects`: To indicate that which components/directories should test.
-        -   `transform`: A map from regular expressions to paths to transformers. A transformer is a module that provides a synchronous function for transforming source files.
-        -   `testRegex`: The pattern or patterns Jest uses to detect test files.
-        -   `transformIgnorePatterns`: An array of regexp pattern strings that are matched against all source file paths before transformation. If the file path matches **any** of the patterns, it will not be transformed.
+        - `collectCoverage`: This flag makes jest to collect coverage report.
+        - `collectCoverageFrom`: To indicate which files the coverage report should collect from. Generally we exclude all of `node_modules` directories.
+        - `collectCoverageFrom`: The type of needed coverage report.
+        - `clearMocks`: configuration option to clear mocks automatically before each test.
+        - `projects`: To indicate that which components/directories should test.
+        - `transform`: A map from regular expressions to paths to transformers. A transformer is a module that provides a synchronous function for transforming source files.
+        - `testRegex`: The pattern or patterns Jest uses to detect test files.
+        - `transformIgnorePatterns`: An array of regexp pattern strings that are matched against all source file paths before transformation. If the file path matches **any** of the patterns, it will not be transformed.
 
-    -   `jest.config.base.js`
+    - `jest.config.base.js`
 
         This Configuration file is held in common across all individual packages. In other words if you want to just run tests related to one package (e.g. trader) this is what that particular package will use as base configuration.
 
@@ -69,7 +69,7 @@ Navigate to the root directory of the package on the command line, then simply r
 
 `jest` or `npx jest`
 
--   Please be informed with `collectCoverage` provided in the `jest.config.base.js` this command will generate coverage percentage in the directory that you are running the tests.
+- Please be informed with `collectCoverage` provided in the `jest.config.base.js` this command will generate coverage percentage in the directory that you are running the tests.
 
 #### `setupTests.js`
 

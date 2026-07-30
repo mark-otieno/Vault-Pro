@@ -117,8 +117,8 @@ const IdvFailed = ({
     const chosen_country = React.useMemo(
         () =>
             is_document_upload_required && !is_from_external
-                ? selected_country ?? {}
-                : residence_list.find(residence_data => residence_data.value === latest_status?.country_code) ?? {},
+                ? (selected_country ?? {})
+                : (residence_list.find(residence_data => residence_data.value === latest_status?.country_code) ?? {}),
         [selected_country, is_document_upload_required, latest_status?.country_code, residence_list, is_from_external]
     );
 
@@ -228,7 +228,7 @@ const IdvFailed = ({
                 const response_error =
                     idv_update_response.error?.code === API_ERROR_CODES.CLAIMED_DOCUMENT
                         ? CLAIMED_DOCUMENT_ERROR_MESSAGE
-                        : idv_update_response?.error?.message ?? GENERIC_ERROR_MESSAGE;
+                        : (idv_update_response?.error?.message ?? GENERIC_ERROR_MESSAGE);
                 setStatus({ error_msg: response_error });
                 setSubmitting(false);
                 return;

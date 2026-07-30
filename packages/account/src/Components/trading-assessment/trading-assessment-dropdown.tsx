@@ -52,9 +52,9 @@ const TradingAssessmentDropdown = ({
             setEnableNextSection(
                 Boolean(
                     values.cfd_experience &&
-                        values.cfd_frequency &&
-                        values.trading_experience_financial_instruments &&
-                        values.trading_frequency_financial_instruments
+                    values.cfd_frequency &&
+                    values.trading_experience_financial_instruments &&
+                    values.trading_frequency_financial_instruments
                 )
             );
         }

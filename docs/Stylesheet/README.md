@@ -2,34 +2,34 @@
 
 **In this document:**
 
--   [General Guidelines](#general-guidelines)
-    -   [Naming Conventions](#naming-conventions)
-    -   [Units](#units)
-    -   [Absolute and relative units](#absolute-and-relative-units)
-    -   [Converts px to em values](#converts-px-to-em-values)
--   [Typography](#typography)
--   [Theme](#theme)
--   [SVG](#svg)
--   [Commenting](#commenting)
+- [General Guidelines](#general-guidelines)
+    - [Naming Conventions](#naming-conventions)
+    - [Units](#units)
+    - [Absolute and relative units](#absolute-and-relative-units)
+    - [Converts px to em values](#converts-px-to-em-values)
+- [Typography](#typography)
+- [Theme](#theme)
+- [SVG](#svg)
+- [Commenting](#commenting)
 
 ## General Guidelines
 
 In order to improve the clarity, quality, and development time it is worth considering the following principles whenever possible:
 
--   [Keep Sass Simple](https://www.sitepoint.com/keep-sass-simple/), which means [KISS (Keep It Simple, Stupid)](https://en.wikipedia.org/wiki/KISS_principle) may override [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don't_repeat_yourself) in some cases
--   [Single responsibility selectors](https://en.bem.info/methodology/css/#single-responsibility-principle)
+- [Keep Sass Simple](https://www.sitepoint.com/keep-sass-simple/), which means [KISS (Keep It Simple, Stupid)](https://en.wikipedia.org/wiki/KISS_principle) may override [DRY (Don't Repeat Yourself)](https://en.wikipedia.org/wiki/Don't_repeat_yourself) in some cases
+- [Single responsibility selectors](https://en.bem.info/methodology/css/#single-responsibility-principle)
 
 ---
 
 ## Style Guide
 
--   [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css/blob/master/README.md) is partially being followed in our code base.
+- [Airbnb CSS / Sass Styleguide](https://github.com/airbnb/css/blob/master/README.md) is partially being followed in our code base.
 
--   [CSS with BEM](https://en.bem.info/methodology/css/) is partially being followed in our code base.
+- [CSS with BEM](https://en.bem.info/methodology/css/) is partially being followed in our code base.
 
--   Most styling issues will be caught by [stylelint](https://github.com/stylelint/stylelint/blob/master/README.md), so before pushing your changes remember to run `grunt stylelint` to catch and fix any issues that it finds.
+- Most styling issues will be caught by [stylelint](https://github.com/stylelint/stylelint/blob/master/README.md), so before pushing your changes remember to run `grunt stylelint` to catch and fix any issues that it finds.
 
--   Check below for the rules that are not caught by styling but should be followed.
+- Check below for the rules that are not caught by styling but should be followed.
 
 ### Naming Conventions
 
@@ -69,7 +69,7 @@ Keep all common variables in the [constants.scss](https://github.com/deriv-com/d
 
 #### Absolute and relative units
 
--   `em` is typically used in padding and margin to maintain the vertical rhythm. If a user resizes the text, the `em` unit will be scaled proportionately. `em` size is always relative to the font-size of the element.
+- `em` is typically used in padding and margin to maintain the vertical rhythm. If a user resizes the text, the `em` unit will be scaled proportionately. `em` size is always relative to the font-size of the element.
 
 ```scss
 // For example: `span` with font-size of 14px and padding of 8px.
@@ -80,7 +80,7 @@ span {
 }
 ```
 
--   `px` is used to define a fixed value such as for `box-shadow`, `border-radius`, and `border-width`.
+- `px` is used to define a fixed value such as for `box-shadow`, `border-radius`, and `border-width`.
 
 #### Converts px to em values
 

@@ -36,7 +36,7 @@ type THandleRejectFiles = Array<{
         {
             message: string;
             code: string;
-        }
+        },
     ];
 }>;
 

@@ -17,13 +17,11 @@ export const PASSKEY_STATUS_CODES = {
     VERIFYING: 'verifying',
 } as const;
 
-export type TPasskeysStatus = typeof PASSKEY_STATUS_CODES[keyof typeof PASSKEY_STATUS_CODES];
+export type TPasskeysStatus = (typeof PASSKEY_STATUS_CODES)[keyof typeof PASSKEY_STATUS_CODES];
 
 // TODO: fix types for TServerError and TSocketError
 export type TPasskeyError =
-    | TServerError
-    | null
-    | TSocketError<'passkeys_list' | 'passkeys_register' | 'passkeys_register_options'>;
+    TServerError | null | TSocketError<'passkeys_list' | 'passkeys_register' | 'passkeys_register_options'>;
 
 export const getPasskeyRenameValidationSchema = () =>
     Yup.object().shape({

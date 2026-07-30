@@ -23,8 +23,7 @@ type TAPIError = {
 type TOnfidoSdkViewContainer = {
     country_code: string;
     documents_supported:
-        | string[]
-        | DeepRequired<ResidenceList>[0]['identity']['services']['onfido']['documents_supported'];
+        string[] | DeepRequired<ResidenceList>[0]['identity']['services']['onfido']['documents_supported'];
     getChangeableFields: () => string[];
     handleViewComplete: () => void;
     height?: number | string;

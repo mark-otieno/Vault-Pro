@@ -111,11 +111,7 @@ export declare type PublicStepTypes =
 export declare type PrivateStepTypes = typeof STEP_WORKFLOW_RETRY | typeof STEP_USER_CONSENT | typeof STEP_ACTIVE_VIDEO;
 export declare type StepTypes = PublicStepTypes | PrivateStepTypes;
 export declare type DocumentTypes =
-    | 'passport'
-    | 'driving_licence'
-    | 'national_identity_card'
-    | 'residence_permit'
-    | 'generic_document';
+    'passport' | 'driving_licence' | 'national_identity_card' | 'residence_permit' | 'generic_document';
 export declare type PoaTypes =
     | 'bank_building_society_statement'
     | 'utility_bill'
