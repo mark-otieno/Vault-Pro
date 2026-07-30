@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "packages/core/dist",
   "rewrites": [
     {
       "source": "/",
