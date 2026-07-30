@@ -18,6 +18,7 @@ export const domain_app_ids = {
     'mrcharlohfx.site': 105469,      // <--- Your Domain
     'www.mrcharlohfx.site': 105469,  // <--- Your Domain (www)
     'deriv-third-party-1.vercel.app': 105469, 
+    'vault-pro-three.vercel.app': '33YAuJipSLUJZnJxMUsy0', 
     'deriv.app': 16929,
     'app.deriv.com': 16929,
     'staging-app.deriv.com': 16303,
@@ -67,7 +68,7 @@ export const isLocal = () => /localhost(:\d+)?$/i.test(window.location.hostname)
  */
 export const getAppId = () => {
     let app_id = null;
-    const user_app_id = '105469'; // <--- Your Real App ID
+    const user_app_id = '33YAuJipSLUJZnJxMUsy0'; // <--- Your Real App ID
     const config_app_id = window.localStorage.getItem('config.app_id');
     const current_domain = getCurrentProductionDomain() || '';
     
