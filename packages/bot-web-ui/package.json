@@ -22,7 +22,7 @@
         "analyze:build": "webpack-bundle-analyzer --no-open -m static -r treemap.html stats.json ./dist && webpack-bundle-analyzer -m json stats.json ./dist",
         "start": "npm run test && npm run serve",
         "serve": "echo \"Serving...\" && NODE_OPTIONS='-r ts-node/register' webpack --progress --watch",
-        "build": "webpack --config \"./build/webpack.config.js\"",
+        "build": "webpack --config \"./webpack.config.js\"",
         "build:skeleton": "npm exec --workspace=@deriv/bot-skeleton -- npm run build",
         "build:travis": "echo \"No build:travis specified\"",
         "test:eslint": "eslint \"./src/**/*.?(js|jsx|ts|tsx|spec.ts|spec.js|spec.tsx|spec.tsx)\"",
