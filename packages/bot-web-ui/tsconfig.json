@@ -3,6 +3,8 @@
     "compilerOptions": {
         "skipLibCheck": true,
         "noEmitOnError": false,
+        "strict": false,
+        "noImplicitAny": false,
         "experimentalDecorators": true,
         "outDir": "./dist",
         "baseUrl": "./",
