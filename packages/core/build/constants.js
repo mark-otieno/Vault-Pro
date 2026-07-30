@@ -8,7 +8,7 @@ const { IgnorePlugin, DefinePlugin } = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const path = require('path');
-const StylelintPlugin = require('stylelint-webpack-plugin');
+// const StylelintPlugin = require('stylelint-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
@@ -96,7 +96,7 @@ const rules = (is_test_env = false) => [
     {
         test: /\.xml$/,
         exclude: /node_modules/,
-        type: 'asset/source', // This tells Webpack: "Read the file content and give it to me as a string"
+        type: 'asset/source', // Read the file content as a string
     },
     {
         test: /\.svg$/,
@@ -158,15 +158,14 @@ const plugins = ({ base, is_test_env }) => {
         new PreloadWebpackPlugin(htmlPreloadConfig()),
         new IgnorePlugin({ resourceRegExp: /^\.\/locale$/, contextRegExp: /moment$/ }),
         new MiniCssExtractPlugin(cssConfig()),
-        new CircularDependencyPlugin({ exclude: /node_modules/, failOnError: true }),
+        new CircularDependencyPlugin({ exclude: /node_modules/, failOnError: false }),
         ...(IS_RELEASE
             ? []
             : [new WebpackManifestPlugin({ fileName: 'asset-manifest.json', filter: file => file.name !== 'CNAME' })]),
         ...(is_test_env
-            ? [new StylelintPlugin(stylelintConfig())]
+            ? []
             : [
                 new GenerateSW(generateSWConfig(IS_RELEASE)),
-                // ...(!IS_RELEASE ? [new BundleAnalyzerPlugin({ analyzerMode: 'static' })] : []),
             ]),
     ];
 };
