@@ -121,7 +121,7 @@ module.exports = function (env) {
                                     // eslint-disable-next-line global-require, import/no-dynamic-require
                                     ...require('../shared/src/styles/index.js'),
                                     // eslint-disable-next-line global-require, import/no-dynamic-require
-                                    ...require(path.resolve(__dirname, '../shared/src/styles/index.js')),
+                                    ...require('./src/styles/index.js'),
                                 ],
                             },
                         },
